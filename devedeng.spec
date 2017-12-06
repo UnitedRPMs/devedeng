@@ -68,7 +68,7 @@ desktop-file-install \
   --delete-original \
   --add-category X-OutputGeneration \
   --dir %{buildroot}%{_datadir}/applications \
-  %{buildroot}%{_datadir}/applications/%{name}.desktop
+  %{buildroot}%{_datadir}/applications/*.desktop
 
 # Move icon into %%{_datadir}/icons/hicolor/
 mkdir -p %{buildroot}%{_datadir}/icons/hicolor/scalable/apps
@@ -103,8 +103,8 @@ fi
 %{_datadir}/%{name}
 %{python3_sitelib}/%{name}*.egg-info
 %{python3_sitelib}/%{name}
-%{_datadir}/applications/%{name}.desktop
-%{_datadir}/icons/hicolor/scalable/apps/%{name}.svg
+%{_datadir}/applications/*.desktop
+%{_datadir}/icons/hicolor/scalable/apps/*.svg
 %exclude %{_mandir}/man1/devede.1*
 %doc %{_docdir}/%{name}
 %license COPYING
