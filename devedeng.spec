@@ -1,5 +1,5 @@
 Name:           devedeng
-Version:        4.8.11
+Version:        4.8.12
 Release:        1%{?dist}
 Summary:        A program to create video DVDs and CDs (VCD, sVCD or CVD)
 
@@ -111,6 +111,9 @@ fi
 
 
 %changelog
+
+* Sun Jan 21 2018 David Vásquez <davidva AT tutanota DOT com> - 4.8.12-1
+- Updated to 4.8.12
 
 * Wed Dec 06 2017 David Vásquez <davidva AT tutanota DOT com> - 4.8.11-1
 - Updated to 4.8.11
