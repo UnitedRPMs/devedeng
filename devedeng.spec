@@ -5,7 +5,7 @@ Summary:        A program to create video DVDs and CDs (VCD, sVCD or CVD)
 
 License:        GPLv3+
 URL:            http://www.rastersoft.com/programas/devede.html
-Source0:        https://github.com/rastersoft/%{name}/archive/%{version}.tar.gz#/%{name}-%{version}.tar.gz
+Source0:        https://gitlab.com/rastersoft/devedeng/-/archive/%{version}/%{name}-%{version}.tar.gz
 
 BuildArch:      noarch
 
@@ -45,7 +45,7 @@ to expand it and easily add new features.
 
 
 %prep
-%setup -q
+%autosetup -n %{name}-%{version}
 
 
 %build
@@ -114,6 +114,7 @@ fi
 
 * Wed Jun 27 2018 Unitedrpms Project <unitedrpms AT protonmail DOT com> 4.12.0-1
 - Updated to 4.12.0
+- Changed sources to gitlab
 
 * Thu May 03 2018 Unitedrpms Project <unitedrpms AT protonmail DOT com> 4.11.0-1
 - Updated to 4.11.0
