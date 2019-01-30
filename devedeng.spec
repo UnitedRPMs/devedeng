@@ -21,8 +21,7 @@ Requires:       vlc
 Requires:       ffmpeg
 Requires:       dvdauthor
 Requires:       vcdimager
-#Requires:       genisoimage
-Requires:       mkisofs
+Requires:       genisoimage
 Requires:       brasero
 #Requires:       k3b
 Requires:       ImageMagick
