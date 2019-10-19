@@ -1,5 +1,5 @@
 Name:           devedeng
-Version:        4.15.0
+Version:        4.16.0
 Release:        7%{?dist}
 Summary:        A program to create video DVDs and CDs (VCD, sVCD or CVD)
 
@@ -110,6 +110,9 @@ fi
 
 
 %changelog
+
+* Fri Oct 18 2019 Unitedrpms Project <unitedrpms AT protonmail DOT com> 4.16.0-7
+- Updated to 4.16.0
 
 * Sun Jul 21 2019 Unitedrpms Project <unitedrpms AT protonmail DOT com> 4.15.0-7
 - Updated to 4.15.0
