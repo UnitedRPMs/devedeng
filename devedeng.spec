@@ -46,18 +46,11 @@ to expand it and easily add new features.
 %prep
 %autosetup -n %{name}-%{version}
 
+# Remove shebang from Python libraries
+find -depth -type f -writable -name "*.py" -exec sed -iE '1s=^#! */usr/bin/\(python\|env python\)[23]\?=#!%{__python3}=' {} +
 
 %build
 %py3_build
-
-# Remove shebang from Python libraries
-for lib in build/lib/devedeng/*.py; do
-  sed '1{\@^#!/usr/bin/env python@d}' $lib > $lib.new &&
-  touch -r $lib $lib.new &&
-  mv $lib.new $lib
-done
-
-
 
 %install
 %py3_install 
