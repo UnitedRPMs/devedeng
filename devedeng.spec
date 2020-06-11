@@ -1,6 +1,6 @@
 Name:           devedeng
 Version:        4.16.0
-Release:        7%{?dist}
+Release:        8%{?dist}
 Summary:        A program to create video DVDs and CDs (VCD, sVCD or CVD)
 
 License:        GPLv3+
@@ -13,6 +13,7 @@ Provides:       devede = %{version}-%{release}
 Obsoletes:      devede < 4.0
 
 BuildRequires:  python3-devel
+BuildRequires:  python3-rpm-macros
 BuildRequires:  gettext
 BuildRequires:  desktop-file-utils
 #Requires:       mplayer
@@ -50,10 +51,11 @@ to expand it and easily add new features.
 find -depth -type f -writable -name "*.py" -exec sed -iE '1s=^#! */usr/bin/\(python\|env python\)[23]\?=#!%{__python3}=' {} +
 
 %build
-%py3_build
+
+python%{python3_version} setup.py build
 
 %install
-%py3_install 
+python%{python3_version} setup.py install --root=%{buildroot} --optimize=1 --skip-build 
 
 # Fix desktop file 
 desktop-file-install \
@@ -103,6 +105,9 @@ fi
 
 
 %changelog
+
+* Wed Jun 10 2020 Unitedrpms Project <unitedrpms AT protonmail DOT com> 4.16.0-8
+- Rebuilt for python3.9
 
 * Fri Oct 18 2019 Unitedrpms Project <unitedrpms AT protonmail DOT com> 4.16.0-7
 - Updated to 4.16.0
